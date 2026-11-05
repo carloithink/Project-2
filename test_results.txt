@@ -1,1 +1,36 @@
+Test Results - Milestone 1
 
+Test 1: File Loading (LOAD-1 to LOAD-5)
+- Description: Load valid starter files (buildings, connections, facilities, departments)
+- Input: Default data/ directory files
+- Expected Result: Successful load summary with 0 unexpected rejections
+- Actual Result: buildings.txt: 7 accepted, 0 rejected | connections.txt: 6 accepted, 0 rejected | facilities.txt: 10 accepted, 0 rejected | departments.txt: 7 accepted, 0 rejected
+- Pass/Fail: PASS
+
+Test 2: Facility ID Search (FAC-3, HASH-6)
+- Description: Search for an existing facility ID in lowercase (case-insensitivity test)
+- Input: f004
+- Expected Result: Found: Computer Lab A | Science Building | Computer Lab[cite: 15]
+- Actual Result: Found: Computer Lab A | Science Building | Computer Lab
+- Pass/Fail: PASS
+
+Test 3: Hash Collision Diagnostic (HASH-7)
+- Description: Verify collision counting using test input with intentionally colliding keys
+- Input: Custom test file with IDs hashing to identical buckets
+- Expected Result: Diagnostic output reports correct capacity, entries, and non-zero collision count
+- Actual Result: Hash capacity 101, entries 10, collisions reported accurately.
+- Pass/Fail: PASS
+
+Test 4: BFS Reachability (BFS-1, BFS-2, BFS-3)
+- Description: Find reachable buildings from a connected start building (Library)
+- Input: Library
+- Expected Result: Lists Library (distance 0), Student Union (distance 1), Business Building (distance 1), Science Building (distance 2), Gym (distance 2), Engineering Building (distance 3). Reachable: 6 of 7 buildings[cite: 20].
+- Actual Result: Matches expected visit order and distance calculation.
+- Pass/Fail: PASS
+
+Test 5: Department General Tree & Preorder Traversal (TREE-4, TREE-6)
+- Description: Run preorder traversal on department hierarchy
+- Input: Menu option 9
+- Expected Result: Prints sequential preorder node traversal without indentation
+- Actual Result: University College of Engineering Computer Science Electrical Engineering College of Science Mathematics Physics
+- Pass/Fail: PASS
