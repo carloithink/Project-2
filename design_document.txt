@@ -1,0 +1,22 @@
+Design Document - Milestone 1
+
+1. Custom ID Hash Table (HASH-1 to HASH-7)
+
+- Class Name: HashTable
+- Key Format: Facility ID (e.g., F001), normalized to uppercase before hashing and storage.
+- Custom Hash Function: Uses polynomial rolling accumulation across the characters of the normalized key multiplied by a prime factor (31), modulo table capacity.
+- Collision Strategy: Separate chaining via `vector<list<HashNode>>`. 
+- Collision Counting (HASH-7): A collision is defined and counted whenever an insertion occurs into a bucket that already contains one or more entries. Initial table capacity is set to 101.
+
+2. Campus Graph (GRAPH-1 to GRAPH-6)
+
+- Class Name: CampusGraph
+- Representation: Dynamically sized adjacency list using `vector` for building order and `map<std::string, vector<string>>` for edge relationships.
+- Properties: Edges are undirected and unweighted. Connections are updated symmetrically at both endpoints and counted once.
+- BFS Implementation: Uses `queue` and a `set` for visited tracking. Vertices are marked visited immediately upon enqueuing to prevent redundant queue entries.
+
+3. Department General Tree (TREE-1 to TREE-6)
+
+- Classes: DepartmentTree and DepartmentNode
+- Representation: General tree where each node contains a name string, a pointer to its parent, and a `vector<DepartmentNode*>` storing an arbitrary number of child pointers.
+- Traversals: Supports preorder traversal recursively and hierarchy visualization with 4-space indentation per depth level.
