@@ -1,1 +1,7 @@
+Team Contributions
 
+Member A [Osvaldo Melendez]: Facility records, custom hash table class, ID search, name/category logic, and facility load summary.
+
+Member B [Carlo Basurto]: Campus graph representation, adjacency list, degrees, and BFS reachability implementation.
+
+Shared Work:  Department general tree structure, node hierarchy, preorder traversal, and department search/add features, File-loading coordination routines, main menu loop, overall testing, README.txt, design_document.txt, and test_results.txt.
